@@ -1,4 +1,7 @@
 import { Module } from '@nestjs/common';
+import { ProjetoProvider } from './projeto.provider';
 
-@Module({})
+@Module({
+  providers: [ProjetoProvider]
+})
 export class ProjetoModule {}
