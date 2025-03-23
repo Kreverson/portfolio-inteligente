@@ -1,4 +1,19 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
+import { ProjetoProvider } from './projeto.provider';
+import { Projeto } from '@core';
 
-@Controller('projeto')
-export class ProjetoController {}
+@Controller('projetos')
+export class ProjetoController {
+    constructor (private readonly repo: ProjetoProvider){}
+
+    @Get()
+    async obterTodas(): Promise<Projeto[]> {
+        return this.repo.obterTodos();
+    }
+    
+    @Get(":id")
+    async obterPorId(@Param("id") id: string): Promise<Projeto> {
+        return this.repo.obterPorId(Number(id)) as any
+    }
+
+}
