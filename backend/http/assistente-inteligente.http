@@ -1,0 +1,7 @@
+POST https://portfoliointeligente.app.n8n.cloud/webhook/assistente-inteligente
+Content-Type: application/json
+
+{
+    "chatId": "123456",
+    "mensagem": "Por favor, quais projetos em Python você desenvolveu?"
+}
