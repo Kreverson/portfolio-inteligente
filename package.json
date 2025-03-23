@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-inteligente",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx concurrently \" cd backend && npm run start:dev\" \"cd frontend && npm run dev \""
+  },
+  "author": "",
+  "license": "ISC"
+}
